@@ -1,9 +1,9 @@
 import Head from 'next/head';
-import styles from '../styles/Home.module.scss';
 
-import Image from 'next/image';
 import React from 'react';
 import { Layout } from '../components/Layout';
+
+// import styles from '../styles/Home.module.scss';
 
 export default function Home() {
 
@@ -13,42 +13,39 @@ export default function Home() {
             <link rel="icon" href="/favicon.ico" />
         </Head>
 
-        <h1 className={styles.title}>
-            Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+        <div className="mb-4">
+            <h1 className="text-center text-5xl">
+                Welcome to <a href="https://nextjs.org">Next.js!</a>
+            </h1>
 
-        <div className={styles.hero}>
-            <div className={styles.heroImage}>
-                <Image src="https://picsum.photos/1080/200" alt="Hero" height={200} width={1080} layout="fixed" objectFit="cover" />
-            </div>
+            <p className="text-center mt-4">
+                Get started by editing <code className="p-1 bg-gray-200 text-gray-600 text-sm rounded">pages/index.tsx</code>
+            </p>
+
         </div>
 
-        <p className={styles.description}>
-            Get started by editing <code className={styles.code}>pages/index.tsx</code>
-        </p>
-
-        <div className={styles.grid}>
-            <a href="https://nextjs.org/docs" className={styles.card}>
-                <h3>Documentation &rarr;</h3>
+        <div className="grid med:grid-cols-1 lg:grid-cols-2 gap-6">
+            <a href="https://nextjs.org/docs" className="rounded-lg shadow-sm bg-white p-6 border border-gray-200 text-black hover:text-indigo-600 hover:no-underline hover:shadow-md">
+                <h3 className="text-2xl">Documentation &rarr;</h3>
                 <p>Find in-depth information about Next.js features and API.</p>
             </a>
 
-            <a href="https://nextjs.org/learn" className={styles.card}>
-                <h3>Learn &rarr;</h3>
+            <a href="https://nextjs.org/learn" className="rounded-lg shadow-sm bg-white p-6 border border-gray-200 text-black hover:text-indigo-600 hover:no-underline hover:shadow-md">
+                <h3 className="text-2xl">Learn &rarr;</h3>
                 <p>Learn about Next.js in an interactive course with quizzes!</p>
             </a>
 
             <a
                 href="https://github.com/vercel/next.js/tree/master/examples"
-                className={styles.card}>
-                <h3>Examples &rarr;</h3>
+                className="rounded-lg shadow-sm bg-white p-6 border border-gray-200 text-black hover:text-indigo-600 hover:no-underline hover:shadow-md">
+                <h3 className="text-2xl">Examples &rarr;</h3>
                 <p>Discover and deploy boilerplate example Next.js projects.</p>
             </a>
 
             <a
                 href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-                className={styles.card}>
-                <h3>Deploy &rarr;</h3>
+                className="rounded-lg shadow-sm bg-white p-6 border border-gray-200 text-black hover:text-indigo-600 hover:no-underline hover:shadow-md">
+                <h3 className="text-2xl" >Deploy &rarr;</h3>
                 <p>Instantly deploy your Next.js site to a public URL with Vercel.</p>
             </a>
         </div>
