@@ -1,9 +1,9 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 
-import NextAuth, { InitOptions } from 'next-auth';
+import NextAuth, { NextAuthOptions } from 'next-auth';
 import Providers from 'next-auth/providers';
 
-const options: InitOptions = {
+const options: NextAuthOptions = {
 	// Configure one or more authentication providers
 	providers: [
 		// Providers.Email({
