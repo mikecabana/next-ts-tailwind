@@ -10,44 +10,36 @@ import { MegaMenuMobile } from '../MegaMenuMobile';
 export type NavProps = {};
 
 export function Nav({}: NavProps) {
-    return (
-        <div className='bg-white sticky top-0'>
-            <div className='container mx-auto border-b border-gray-200 flex justify-between items-center p-4 mb-8'>
-                <div className='flex-grow flex items-center'>
-                    <Link href='/'>
-                        <a className='mr-4'>
-                            <GlobeIcon className='h-10 w-10 text-indigo-700' />
-                        </a>
-                    </Link>
+	return (
+		<div className="bg-white sticky top-0">
+			<div className="container mx-auto border-b border-gray-200 flex justify-between items-center p-4 mb-8">
+				<div className="flex-grow flex items-center">
+					<Link href="/">
+						<a className="mr-4">
+							<GlobeIcon className="h-10 w-10 text-indigo-700" />
+						</a>
+					</Link>
 
-                    <div className='md:flex items-center hidden'>
-                        <Link href='/'>
-                            <a className='mr-4 hover:underline  font-semibold'>Home</a>
-                        </Link>
+					<div className="md:flex items-center hidden">
+						<Link href="/">
+							<a className="mr-4 hover:underline  font-semibold">Home</a>
+						</Link>
 
-                        <Link href='/about'>
-                            <a className='mr-4 hover:underline  font-semibold'>About</a>
-                        </Link>
-                    </div>
-                </div>
+						<Link href="/about">
+							<a className="mr-4 hover:underline  font-semibold">About</a>
+						</Link>
+					</div>
+				</div>
 
-                <div className='flex items-center'>
-                    <div className='flex-grow flex items-center md:hidden'>
-                        <MegaMenuMobile />
-                    </div>
-                    <div className='flex-grow md:flex items-center hidden'>
-                        <MegaMenu name='Menu' useHover={true} />
-                        <a
-                            className='bg-indigo-100 text-indigo-700 rounded-full px-4 py-1 hover:underline font-semibold'
-                            href={`/api/auth/signin`}
-                            onClick={(e) => {
-                                e.preventDefault();
-                            }}>
-                            Sign in
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    );
+				<div className="flex items-center">
+					<div className="flex-grow flex items-center md:hidden">
+						<MegaMenuMobile />
+					</div>
+					<div className="flex-grow md:flex items-center hidden">
+						<MegaMenu name="Menu" useHover={true} />
+					</div>
+				</div>
+			</div>
+		</div>
+	);
 }
